@@ -1,0 +1,88 @@
+{
+ "points": [
+  {
+   "corpus": "IEMOCAP-4",
+   "fold": "1",
+   "dloglik": 0.0073,
+   "rct_duar": 0.5883473423662196
+  },
+  {
+   "corpus": "IEMOCAP-4",
+   "fold": "2",
+   "dloglik": 0.042,
+   "rct_duar": 0.9261524129651519
+  },
+  {
+   "corpus": "IEMOCAP-4",
+   "fold": "3",
+   "dloglik": 0.0283,
+   "rct_duar": 0.6924078525641164
+  },
+  {
+   "corpus": "IEMOCAP-4",
+   "fold": "4",
+   "dloglik": 0.0494,
+   "rct_duar": 0.6250032160492367
+  },
+  {
+   "corpus": "IEMOCAP-4",
+   "fold": "5",
+   "dloglik": 0.0471,
+   "rct_duar": 0.623652225313208
+  },
+  {
+   "corpus": "IEMOCAP-6",
+   "fold": "1",
+   "dloglik": 0.012838127128050214,
+   "rct_duar": 0.5045513998255728
+  },
+  {
+   "corpus": "IEMOCAP-6",
+   "fold": "2",
+   "dloglik": 0.00880763085680758,
+   "rct_duar": 0.15038854619479025
+  },
+  {
+   "corpus": "IEMOCAP-6",
+   "fold": "3",
+   "dloglik": 0.028024550896823763,
+   "rct_duar": 0.27279505425053685
+  },
+  {
+   "corpus": "IEMOCAP-6",
+   "fold": "4",
+   "dloglik": 0.01287209886465035,
+   "rct_duar": 0.30653286008680425
+  },
+  {
+   "corpus": "IEMOCAP-6",
+   "fold": "5",
+   "dloglik": 0.02276450625021198,
+   "rct_duar": 0.45992032529879623
+  },
+  {
+   "corpus": "MELD",
+   "fold": "",
+   "dloglik": 0.0057,
+   "rct_duar": 0.10059374757496187
+  },
+  {
+   "corpus": "M3ED",
+   "fold": "",
+   "dloglik": 0.08390443775332357,
+   "rct_duar": 1.2235226966537596
+  }
+ ],
+ "pearson": [
+  0.8285117678825598,
+  0.000869124818495036
+ ],
+ "spearman": [
+  0.7762237762237763,
+  0.0029928636801859797
+ ],
+ "slope_intercept": [
+  11.479025384136197,
+  0.20562979275456125
+ ]
+}

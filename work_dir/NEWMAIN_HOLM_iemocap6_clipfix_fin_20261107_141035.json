@@ -1,0 +1,425 @@
+{
+ "setting": "iemocap6",
+ "ssot": "10.18.478",
+ "doc": "Holm-Bonferroni correction of the paper's paired comparisons (request docs/Paper2_Server_Request_20261107_FinishedOnly.md section 4.4; SSOT 10.18.478).\nReads JSON only: the p-value reruns (EMOCARE_PV=1, files *_pv_*; same 2000 resamples, default_rng(20260928), as section 2) of\npaper2_newmain_core_20261029.py, paper2_ctx_matchhist_20261029.py and paper2_newmain_bases_20261029.py; IEMOCAP with the finished-only context.\np = min(1, 2 min((b_L + 1)/(B + 1), (b_R + 1)/(B + 1))), b_L / b_R = resamples with d <= 0 / d >= 0, B = 2000.\nFamilies (Holm within a family, none across families):\n  1  Table III: per setting and metric, EmoCaRe against w/o CCT, w/o GCT, w/o GCT and CCT, w/o prior correction, w/o history, one sequence for all\n     speakers, the base model (core) and MatchHIST (EmoCaRe+CTX - MatchHIST of the MatchHIST script, i.e. the full EmoCaRe): 8 comparisons;\n  2  Table IV: per base model and setting, EmoCaRe - base model, the three metrics;\n  3  IV-G, zero-shot model and OPPO: per base model and setting, EmoCaRe (MACD+GCT+CCT) - MACD, the three metrics.  Their EmoCaRe - base model is\n     already family 2 and is not adjusted a second time (the request's rule for the main comparisons).\nListed: comparisons significant without correction (95% interval excludes 0) whose Holm-adjusted p is >= 0.05.  Also checks that the reruns\nreproduce the files the paper uses (IEMOCAP: the _fin files, exactly; MELD / M3ED: the 2026-10-29 files, drift recorded).  Usage: script.py",
+ "families": {
+  "1 Table III | iemocap6 | WAR": {
+   "m": 8,
+   "comparisons": {
+    "EmoCaRe - w/o CCT (MACD+GCT)": {
+     "diff": 1.1918345760756566,
+     "lo": 0.6000185639973514,
+     "hi": 1.765862704444059,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - w/o GCT (MACD+CCT)": {
+     "diff": 0.03699435987923039,
+     "lo": -0.20007071445071103,
+     "hi": 0.26529358191807145,
+     "p": 0.7406296851574213,
+     "sig_ci": false,
+     "p_holm": 1.0,
+     "sig_holm": false
+    },
+    "EmoCaRe - w/o GCT, CCT (MACD)": {
+     "diff": 1.4702340710195614,
+     "lo": 0.8786108811326606,
+     "hi": 2.036116341886924,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - w/o prior correction": {
+     "diff": -1.009792927060289,
+     "lo": -2.237919109528414,
+     "hi": 0.20685543863828623,
+     "p": 0.11294352823588207,
+     "sig_ci": false,
+     "p_holm": 0.3388305847076462,
+     "sig_holm": false
+    },
+    "EmoCaRe - w/o history (LA)": {
+     "diff": 9.274512541500727,
+     "lo": 8.102086113453097,
+     "hi": 10.43123108193225,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - one sequence for all speakers": {
+     "diff": 2.1513974909249356,
+     "lo": 1.4456692251239809,
+     "hi": 2.8875296383776594,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - base model": {
+     "diff": 8.48974085625774,
+     "lo": 7.290635969101239,
+     "hi": 9.640244033199155,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - MatchHIST": {
+     "diff": -0.17813340661756172,
+     "lo": -1.0573860059155593,
+     "hi": 0.6643640421465811,
+     "p": 0.6826586706646677,
+     "sig_ci": false,
+     "p_holm": 1.0,
+     "sig_holm": false
+    }
+   }
+  },
+  "1 Table III | iemocap6 | UAR": {
+   "m": 8,
+   "comparisons": {
+    "EmoCaRe - w/o CCT (MACD+GCT)": {
+     "diff": 0.7794097592170033,
+     "lo": 0.0059327151234107615,
+     "hi": 1.2818751185179138,
+     "p": 0.04997501249375312,
+     "sig_ci": true,
+     "p_holm": 0.04997501249375312,
+     "sig_holm": true
+    },
+    "EmoCaRe - w/o GCT (MACD+CCT)": {
+     "diff": 0.35138374658824034,
+     "lo": 0.09864611037402328,
+     "hi": 0.6602735923671058,
+     "p": 0.008995502248875561,
+     "sig_ci": true,
+     "p_holm": 0.0239880059970015,
+     "sig_holm": true
+    },
+    "EmoCaRe - w/o GCT, CCT (MACD)": {
+     "diff": 1.118247396348309,
+     "lo": 0.30562735713340244,
+     "hi": 1.672340450318283,
+     "p": 0.0079960019990005,
+     "sig_ci": true,
+     "p_holm": 0.0239880059970015,
+     "sig_holm": true
+    },
+    "EmoCaRe - w/o prior correction": {
+     "diff": 2.6066255442245776,
+     "lo": 1.639505348851864,
+     "hi": 3.709918130450579,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - w/o history (LA)": {
+     "diff": 9.403885011990255,
+     "lo": 7.57747417825293,
+     "hi": 10.380197115348142,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - one sequence for all speakers": {
+     "diff": 1.8758480358160625,
+     "lo": 1.1659702289012368,
+     "hi": 2.611806684829766,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - base model": {
+     "diff": 10.040103295363437,
+     "lo": 8.346851925538651,
+     "hi": 10.952767933976116,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - MatchHIST": {
+     "diff": 1.4992771286589601,
+     "lo": 0.7583705623276747,
+     "hi": 2.2887068021226877,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    }
+   }
+  },
+  "1 Table III | iemocap6 | MF1": {
+   "m": 8,
+   "comparisons": {
+    "EmoCaRe - w/o CCT (MACD+GCT)": {
+     "diff": 1.121794266643434,
+     "lo": 0.3524578752962059,
+     "hi": 1.7182783898528278,
+     "p": 0.00399800099950025,
+     "sig_ci": true,
+     "p_holm": 0.015992003998001,
+     "sig_holm": true
+    },
+    "EmoCaRe - w/o GCT (MACD+CCT)": {
+     "diff": 0.20095203167494446,
+     "lo": -0.050535100695699955,
+     "hi": 0.4704845979305933,
+     "p": 0.10394802598700649,
+     "sig_ci": false,
+     "p_holm": 0.3118440779610195,
+     "sig_holm": false
+    },
+    "EmoCaRe - w/o GCT, CCT (MACD)": {
+     "diff": 1.4597828163358173,
+     "lo": 0.6629883964933677,
+     "hi": 2.097424815396202,
+     "p": 0.001999000499750125,
+     "sig_ci": true,
+     "p_holm": 0.009995002498750623,
+     "sig_holm": true
+    },
+    "EmoCaRe - w/o prior correction": {
+     "diff": 1.0923685525776605,
+     "lo": -0.3241719287569861,
+     "hi": 2.598831985555722,
+     "p": 0.12093953023488256,
+     "sig_ci": false,
+     "p_holm": 0.3118440779610195,
+     "sig_holm": false
+    },
+    "EmoCaRe - w/o history (LA)": {
+     "diff": 9.647867791423643,
+     "lo": 8.202907908219682,
+     "hi": 10.876021559617518,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - one sequence for all speakers": {
+     "diff": 2.0063763025367436,
+     "lo": 1.310496097601804,
+     "hi": 2.7419776472283393,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - base model": {
+     "diff": 9.200277883083153,
+     "lo": 7.774728421193964,
+     "hi": 10.447629508674957,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0079960019990005,
+     "sig_holm": true
+    },
+    "EmoCaRe - MatchHIST": {
+     "diff": 0.6172744751107544,
+     "lo": -0.1802991182989066,
+     "hi": 1.5012238984658923,
+     "p": 0.14192903548225888,
+     "sig_ci": false,
+     "p_holm": 0.3118440779610195,
+     "sig_holm": false
+    }
+   }
+  },
+  "2 Table IV | mmin | iemocap6": {
+   "m": 3,
+   "comparisons": {
+    "EmoCaRe - base model | WAR": {
+     "diff": 5.412911653783773,
+     "lo": 4.015291801577368,
+     "hi": 6.844435837825573,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - base model | UAR": {
+     "diff": 7.276778962501737,
+     "lo": 5.6258661295038435,
+     "hi": 8.753624315529567,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - base model | MF1": {
+     "diff": 5.908272469420005,
+     "lo": 4.343331757209592,
+     "hi": 7.297415879887253,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    }
+   }
+  },
+  "2 Table IV | zeroshot | iemocap6": {
+   "m": 3,
+   "comparisons": {
+    "EmoCaRe - base model | WAR": {
+     "diff": -6.222788248557844,
+     "lo": -8.879645637858976,
+     "hi": -3.4250091924968524,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - base model | UAR": {
+     "diff": -0.13216740701955842,
+     "lo": -1.8274911517580232,
+     "hi": 1.513537613916639,
+     "p": 0.8195902048975512,
+     "sig_ci": false,
+     "p_holm": 0.8195902048975512,
+     "sig_holm": false
+    },
+    "EmoCaRe - base model | MF1": {
+     "diff": -2.6434558695015227,
+     "lo": -4.4713776566895715,
+     "hi": -1.010997651675263,
+     "p": 0.0029985007496251873,
+     "sig_ci": true,
+     "p_holm": 0.005997001499250375,
+     "sig_holm": true
+    }
+   }
+  },
+  "3 IV-G | zeroshot | iemocap6": {
+   "m": 3,
+   "comparisons": {
+    "EmoCaRe - MACD | WAR": {
+     "diff": 12.809261216930718,
+     "lo": 10.908938664104209,
+     "hi": 14.77021029640654,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - MACD | UAR": {
+     "diff": 10.583286785000833,
+     "lo": 9.17937834422526,
+     "hi": 11.66069289837092,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - MACD | MF1": {
+     "diff": 13.07579352639891,
+     "lo": 11.394559341782294,
+     "hi": 13.968445142485015,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    }
+   }
+  },
+  "2 Table IV | oppo | iemocap6": {
+   "m": 3,
+   "comparisons": {
+    "EmoCaRe - base model | WAR": {
+     "diff": 5.642928045332205,
+     "lo": 3.706193307488095,
+     "hi": 7.797628778399799,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - base model | UAR": {
+     "diff": 9.009124425221003,
+     "lo": 6.863564616593493,
+     "hi": 10.69256267629388,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - base model | MF1": {
+     "diff": 7.926902585054663,
+     "lo": 5.589094071892768,
+     "hi": 9.498001497964049,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    }
+   }
+  },
+  "3 IV-G | oppo | iemocap6": {
+   "m": 3,
+   "comparisons": {
+    "EmoCaRe - MACD | WAR": {
+     "diff": 7.3895704364009305,
+     "lo": 5.965485663032164,
+     "hi": 9.007877928036322,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - MACD | UAR": {
+     "diff": 6.44549063754264,
+     "lo": 4.830137360902058,
+     "hi": 7.660461997562359,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    },
+    "EmoCaRe - MACD | MF1": {
+     "diff": 10.460250622259018,
+     "lo": 8.440952237009721,
+     "hi": 11.683674858023975,
+     "p": 0.0009995002498750624,
+     "sig_ci": true,
+     "p_holm": 0.0029985007496251873,
+     "sig_holm": true
+    }
+   }
+  }
+ },
+ "lost_after_holm": [],
+ "reproduction": {
+  "core max |diff - paper file|": {
+   "EmoCaRe - w/o CCT (MACD+GCT)": 0.0,
+   "EmoCaRe - w/o GCT (MACD+CCT)": 0.0,
+   "EmoCaRe - w/o GCT, CCT (MACD)": 0.0,
+   "EmoCaRe - w/o prior correction": 0.0,
+   "EmoCaRe - w/o history (LA)": 0.0,
+   "EmoCaRe - one sequence for all speakers": 0.0,
+   "EmoCaRe - base model": 0.0
+  },
+  "MatchHIST max |diff - paper file|": {
+   "EmoCaRe+CTX - MatchHIST": 0.0
+  },
+  "base mmin max |diff - paper file|": {
+   "EmoCaRe - base model": 0.0,
+   "EmoCaRe - MACD": 0.0
+  },
+  "base zeroshot max |diff - paper file|": {
+   "EmoCaRe - base model": 0.0,
+   "EmoCaRe - MACD": 0.0
+  },
+  "base oppo max |diff - paper file|": {
+   "EmoCaRe - base model": 0.0,
+   "EmoCaRe - MACD": 0.0
+  }
+ }
+}

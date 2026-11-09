@@ -1,0 +1,5 @@
+# Enough to rebuild the tables and data figures from the committed JSON files (no GPU, no datasets).
+numpy==1.26.4
+scipy==1.11.4
+scikit-learn==1.7.2
+matplotlib==3.10.8

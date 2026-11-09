@@ -1,0 +1,27 @@
+# Never commit datasets, media, weights or per-utterance caches.
+data/
+logs/
+checkpoints/
+work_dir/*/
+*.jsonl
+*.mp4
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.flac
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.npy
+*.npz
+*.pkl
+*.png
+*.jpg
+*.jpeg
+paper/figures/
+__pycache__/
+*.pyc
+.venv/
