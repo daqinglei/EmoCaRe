@@ -1,7 +1,7 @@
-# EmoCaRe
+# EmoCODA
 
-Code for **EmoCaRe**, a causal decoder for conversational emotion recognition with a multimodal large language model under arbitrary missing modalities.
-EmoCaRe = MACD + GCT + CCT, on top of a fine-tuned Qwen2.5-Omni-3B:
+Code for **EmoCODA**, a causal decoder for conversational emotion recognition with a multimodal large language model under arbitrary missing modalities.
+EmoCODA (Causal Online Decoding with Adaptive Transitions; called EmoCaRe during development, so code, file names and result-file keys keep the old name) = MACD + GCT + CCT, on top of a fine-tuned Qwen2.5-Omni-3B:
 
 - **MACD** calibrates the scores of each modality combination, divides by the training class prior, and runs a forward recursion over the utterance sequence of a speaker.
 - **GCT** selects the transition matrix by the gap since the speaker last spoke.
@@ -56,7 +56,7 @@ Set `EMOZOOM_DATA` to the folder holding the datasets, and set the Qwen2.5-Omni-
 
 | Dataset | Steps, in order |
 |---|---|
-| MELD | `freeze_meld_qwen_sft_platform_protocol.py`, `paper2_build_meld_official_splits_20260916.py`, `paper2_meld_emp_devselect_test_20260916.py` (the paper uses its control arm; the other arm is not part of EmoCaRe) |
+| MELD | `freeze_meld_qwen_sft_platform_protocol.py`, `paper2_build_meld_official_splits_20260916.py`, `paper2_meld_emp_devselect_test_20260916.py` (the paper uses its control arm; the other arm is not part of EmoCODA) |
 | IEMOCAP | `build_iemocap_qwen_protocol.py`, `paper2_iemocap_clips_v2_20261010.py`, `paper2_build_session_protocol_clipfix_20261010.py`, `paper2_session_fivefold_clipfix_20261010.py` with `TARGET=iemocap4` or `iemocap6` |
 | M3ED | `paper2_build_m3ed_at_protocol_20260922.py` (media under `data/M3ED`), `paper2_m3ed_train_queue_20260922.sh`, `paper2_m3ed_eval_queue_20260922.sh` |
 
@@ -66,7 +66,7 @@ These are the scripts as they were used, written for a four-GPU server. Expect t
 
 | Check | Result |
 |---|---|
-| Rebuild from this repository in a clean Python 3.10 environment, without any data | Tables, Holm correction and figures build; the main-table row of EmoCaRe equals the paper |
+| Rebuild from this repository in a clean Python 3.10 environment, without any data | Tables, Holm correction and figures build; the main-table row of EmoCODA equals the paper |
 | Rerun with this code and the private scores: frozen selection on the four settings | The selected weights equal the stored ones |
 | Rerun: leave-one-out comparison, MatchHIST and every base model, 26 result groups | Bitwise equal to our reruns of 2026-11-07 in the same environment |
 | Fine-tuning and scoring (step 3) | **Not rerun for this release**; they take days on four GPUs |
@@ -87,7 +87,7 @@ These are the scripts as they were used, written for a four-GPU server. Expect t
 | Paired difference between methods | 0.066 |
 | End of a 95% interval | 0.094 |
 
-For EmoCaRe itself:
+For EmoCODA itself:
 
 | Setting | WAR, UAR, MF1 in the paper's file | WAR, UAR, MF1 rerun |
 |---|---|---|
