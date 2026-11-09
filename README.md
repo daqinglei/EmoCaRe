@@ -100,4 +100,4 @@ Because of this, the release records this check in the output's `pv_info` field 
 
 ## License
 
-To be added before the public release.
+To be added.
