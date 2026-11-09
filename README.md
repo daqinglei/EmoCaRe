@@ -100,4 +100,4 @@ Because of this, the release records this check in the output's `pv_info` field 
 
 ## License
 
-To be added.
+The code and the result files in this repository are released under the [Apache License 2.0](LICENSE). The license does not cover the datasets (IEMOCAP, MELD, M3ED) or the model weights; obtain them from their owners under their own licenses.
